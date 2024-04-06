@@ -1,0 +1,8 @@
+node_modules
+access.log
+server.cert
+server.key
+.env
+nodemon.json
+data
+images
