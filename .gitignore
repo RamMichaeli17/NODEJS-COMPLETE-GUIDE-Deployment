@@ -4,5 +4,3 @@ server.cert
 server.key
 .env
 nodemon.json
-data
-images

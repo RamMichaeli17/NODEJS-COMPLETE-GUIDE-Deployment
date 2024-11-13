@@ -327,50 +327,51 @@ exports.getInvoice = (req, res, next) => {
       const invoiceName = "invoice-" + orderId + ".pdf";
       const invoicePath = path.join("data", "invoices", invoiceName);
 
-      const pdfDoc = new PDFDocument();
-      res.setHeader("Content-Type", "application/pdf");
-      res.setHeader(
-        "Content-Disposition",
-        'inline; filename="' + invoiceName + '"'
-      );
-      pdfDoc.pipe(fs.createWriteStream(invoicePath));
-      pdfDoc.pipe(res);
-
-      pdfDoc.fontSize(26).text("Invoice", {
-        underline: true,
-      });
-      pdfDoc.text("-----------------------");
-      let totalPrice = 0;
-      order.products.forEach((prod) => {
-        totalPrice += prod.quantity * prod.product.price;
-        pdfDoc
-          .fontSize(14)
-          .text(
-            prod.product.title +
-              " - " +
-              prod.quantity +
-              " x " +
-              "$" +
-              prod.product.price
+      // Check if the cached file exists
+      fs.access(invoicePath, fs.constants.F_OK, (err) => {
+        if (!err) {
+          // Cached file exists, serve it
+          res.setHeader("Content-Type", "application/pdf");
+          res.setHeader(
+            "Content-Disposition",
+            'inline; filename="' + invoiceName + '"'
           );
-      });
-      pdfDoc.text("---");
-      pdfDoc.fontSize(20).text("Total Price: $" + totalPrice);
+          fs.createReadStream(invoicePath).pipe(res);
+        } else {
+          // Cached file doesn't exist, generate the PDF invoice
+          const pdfDoc = new PDFDocument();
+          res.setHeader("Content-Type", "application/pdf");
+          res.setHeader(
+            "Content-Disposition",
+            'inline; filename="' + invoiceName + '"'
+          );
+          pdfDoc.pipe(fs.createWriteStream(invoicePath));
+          pdfDoc.pipe(res);
 
-      pdfDoc.end();
-      // fs.readFile(invoicePath, (err, data) => {
-      //   if (err) {
-      //     return next(err);
-      //   }
-      //   res.setHeader("Content-Type", "application/pdf");
-      //   res.setHeader(
-      //     "Content-Disposition",
-      //     'inline; filename="' + invoiceName + '"'
-      //   );
-      //   res.send(data);
-      // });
-      // const file = fs.createReadStream(invoicePath);
-      // file.pipe(res);
+          pdfDoc.fontSize(26).text("Invoice", {
+            underline: true,
+          });
+          pdfDoc.text("-----------------------");
+          let totalPrice = 0;
+          order.products.forEach((prod) => {
+            totalPrice += prod.quantity * prod.product.price;
+            pdfDoc
+              .fontSize(14)
+              .text(
+                prod.product.title +
+                  " - " +
+                  prod.quantity +
+                  " x " +
+                  "$" +
+                  prod.product.price
+              );
+          });
+          pdfDoc.text("---");
+          pdfDoc.fontSize(20).text("Total Price: $" + totalPrice);
+
+          pdfDoc.end();
+        }
+      });
     })
     .catch((err) => next(err));
 };
