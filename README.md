@@ -12,17 +12,17 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/RamMichaeli17/NODEJS-COMPLETE-GUIDE-DEPLOYMENT">
+  <a href="https://github.com/RamMichaeli17/Online-Shop">
     <img src="https://github.com/user-attachments/assets/e3c955c7-fac4-4a35-aedb-862159131003" alt="Logo" width="240" height="240">
   </a>
 
-<h3 align="center">Node.js Online Shop Project</h3>
+<h3 align="center">Online Shop Project</h3>
 
   <p align="center">
     This project is a full-featured online shop application built with <strong>Node.js</strong>, <strong>Express.js</strong>, and <strong>MongoDB</strong>. It includes core features like user authentication, product management, shopping cart functionality, and order processing, providing a practical, real-world example of a Node.js application.
     <br />
     <br />
-    Visit the deployed application: <a href="https://nodejs-complete-guide-deployment.onrender.com">Node.js Complete Guide Deployment</a>
+    Visit the deployed application: <a href="https://online-shop-5pmk.onrender.com">Online Shop Deployment</a>
     <br />
     <strong>Note:</strong> Due to free tier limitations, expect delays on first load due to app sleep mode.
     <br /><br />
@@ -51,9 +51,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![image](https://github.com/user-attachments/assets/6047fd5b-a087-46b1-8152-0bd82527e3c6)
+![image](https://github.com/user-attachments/assets/efdda313-a3ba-43f5-9a99-3764a20f5f3b)
 
-This Node.js online shop project simulates a functional e-commerce application where users can browse products, add items to a cart, and complete a checkout process. It covers the essential features of web development, including:
+This online shop project simulates a functional e-commerce application where users can browse products, add items to a cart, and complete a checkout process. It covers the essential features of web development, including:
 
 - **Product Management**: Admins can add, edit, and delete products.
 - **User Authentication**: Users can sign up, log in, and manage their accounts.
@@ -134,7 +134,7 @@ This project is deployed using **[Render](https://render.com/)**. Please note th
 
 - **Free Tier Limitations**: Due to the limitations of the free tier on Render, the instance will spin down with inactivity, which can delay requests by 50 seconds or more.
 
-Visit the deployed application: [Node.js Complete Guide Deployment](https://nodejs-complete-guide-deployment.onrender.com)
+Visit the deployed application: [Online Shop Deployment](https://online-shop-5pmk.onrender.com)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -146,7 +146,7 @@ Visit the deployed application: [Node.js Complete Guide Deployment](https://node
 
 1. Clone the repository
    ```sh
-   git clone https://github.com/RamMichaeli17/NODEJS-COMPLETE-GUIDE-DEPLOYMENT.git
+   git clone https://github.com/RamMichaeli17/Online-Shop.git
    ```
 2. Install NPM packages
    ```sh
@@ -170,7 +170,6 @@ Visit the deployed application: [Node.js Complete Guide Deployment](https://node
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- USAGE EXAMPLES -->
 ## Usage
 
 - **Admin Panel**: Manage products (add, edit, delete).
@@ -180,10 +179,10 @@ Visit the deployed application: [Node.js Complete Guide Deployment](https://node
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- LICENSE -->
+
 ## License
 
-Distributed under the MIT License. See [`LICENSE.txt`](https://github.com/RamMichaeli17/NODEJS-COMPLETE-GUIDE-DEPLOYMENT/blob/main/LICENSE.txt) for more information.
+Distributed under the MIT License. See [`LICENSE.txt`](https://github.com/RamMichaeli17/Online-Shop/blob/main/LICENSE.txt) for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -207,12 +206,11 @@ Thanks to the following people who have contributed to this project:
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- CONTACT -->
 ## Contact
 
 Ram Michaeli - [ram153486@gmail.com](mailto:ram153486@gmail.com)
 
-Project Link: [https://github.com/RamMichaeli17/NODEJS-COMPLETE-GUIDE-DEPLOYMENT](https://github.com/RamMichaeli17/NODEJS-COMPLETE-GUIDE-DEPLOYMENT)
+Project Link: [https://github.com/RamMichaeli17/Online-Shop](https://github.com/RamMichaeli17/Online-Shop)
 
 <a href="mailto:ram153486@gmail.com"><img src="https://img.shields.io/twitter/url?label=Gmail%3A%20ram153486%40gmail.com&logo=gmail&style=social&url=https%3A%2F%2Fmailto%3Aram153486%40gmail.com"/></a>
 <a href="https://linkedin.com/in/ram-michaeli"><img src="https://img.shields.io/twitter/url?label=ram%20Michaeli&logo=linkedin&style=social&url=https%3A%2F%2Fmailto%3Aram153486%40gmail.com"/></a>
@@ -220,14 +218,14 @@ Project Link: [https://github.com/RamMichaeli17/NODEJS-COMPLETE-GUIDE-DEPLOYMENT
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[reposize-shield]: https://img.shields.io/github/repo-size/RamMichaeli17/NODEJS-COMPLETE-GUIDE-DEPLOYMENT?style=for-the-badge
-[languagescount-shield]: https://img.shields.io/github/languages/count/RamMichaeli17/NODEJS-COMPLETE-GUIDE-DEPLOYMENT?style=for-the-badge
-[contributors-shield]: https://img.shields.io/github/contributors/RamMichaeli17/NODEJS-COMPLETE-GUIDE-DEPLOYMENT.svg?style=for-the-badge
-[contributors-url]: https://github.com/RamMichaeli17/NODEJS-COMPLETE-GUIDE-DEPLOYMENT/graphs/contributors
-[stars-shield]: https://img.shields.io/github/stars/RamMichaeli17/NODEJS-COMPLETE-GUIDE-DEPLOYMENT.svg?style=for-the-badge
-[stars-url]: https://github.com/RamMichaeli17/NODEJS-COMPLETE-GUIDE-DEPLOYMENT/stargazers
-[license-shield]: https://img.shields.io/github/license/RamMichaeli17/NODEJS-COMPLETE-GUIDE-DEPLOYMENT.svg?style=for-the-badge
-[license-url]: https://github.com/RamMichaeli17/NODEJS-COMPLETE-GUIDE-DEPLOYMENT/blob/main/LICENSE.txt
+[reposize-shield]: https://img.shields.io/github/repo-size/RamMichaeli17/Online-Shop?style=for-the-badge
+[languagescount-shield]: https://img.shields.io/github/languages/count/RamMichaeli17/Online-Shop?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/RamMichaeli17/Online-Shop.svg?style=for-the-badge
+[contributors-url]: https://github.com/RamMichaeli17/Online-Shop/graphs/contributors
+[stars-shield]: https://img.shields.io/github/stars/RamMichaeli17/Online-Shop.svg?style=for-the-badge
+[stars-url]: https://github.com/RamMichaeli17/Online-Shop/stargazers
+[license-shield]: https://img.shields.io/github/license/RamMichaeli17/Online-Shop.svg?style=for-the-badge
+[license-url]: https://github.com/RamMichaeli17/Online-Shop/blob/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white
 [linkedin-url]: https://linkedin.com/in/ram-michaeli
 [gmail-shield]: https://img.shields.io/badge/ram153486@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white
