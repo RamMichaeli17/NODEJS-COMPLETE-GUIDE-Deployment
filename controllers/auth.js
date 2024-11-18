@@ -180,42 +180,38 @@ exports.getReset = (req, res, next) => {
   });
 };
 
-exports.postReset = (req, res, next) => {
-  crypto.randomBytes(32, (err, buffer) => {
-    if (err) {
-      console.log(err);
+exports.postReset = async (req, res, next) => {
+  try {
+    const buffer = await crypto.randomBytes(32);
+    const token = buffer.toString("hex");
+    const user = await User.findOne({ email: req.body.email });
+
+    if (!user) {
+      req.flash("error", "No account with that email found.");
       return res.redirect("/reset");
     }
-    const token = buffer.toString("hex");
-    User.findOne({ email: req.body.email })
-      .then((user) => {
-        if (!user) {
-          req.flash("error", "No account with that email found.");
-          return res.redirect("/reset");
-        }
-        user.resetToken = token;
-        user.resetTokenExpiration = Date.now() + 3600000;
-        return user.save();
-      })
-      .then((result) => {
-        const resetUrl = `${req.protocol}://${req.get("host")}/reset/${token}`;
-        res.redirect("/");
-        transporter.sendMail({
-          to: req.body.email,
-          from: "kehib82616@azduan.com",
-          subject: "Password reset",
-          html: `
-            <p>You requested a password reset</p>
-            <p>Click this <a href="${resetUrl}">link</a> to set a new password.</p>
-          `,
-        });
-      })
-      .catch((err) => {
-        const error = new Error(err);
-        error.httpStatusCode = 500;
-        return next(error);
-      });
-  });
+
+    user.resetToken = token;
+    user.resetTokenExpiration = Date.now() + 3600000;
+    await user.save();
+
+    const resetUrl = `${req.protocol}://${req.get("host")}/reset/${token}`;
+    await transporter.sendMail({
+      to: req.body.email,
+      from: "kehib82616@azduan.com",
+      subject: "Password reset",
+      html: `
+        <p>You requested a password reset</p>
+        <p>Click this <a href="${resetUrl}">link</a> to set a new password.</p>
+      `,
+    });
+
+    res.redirect("/");
+  } catch (err) {
+    const error = new Error(err);
+    error.httpStatusCode = 500;
+    next(error);
+  }
 };
 
 exports.getNewPassword = (req, res, next) => {
