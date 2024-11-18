@@ -160,7 +160,7 @@ exports.getProducts = (req, res, next) => {
     .then((products) => {
       res.render("admin/products", {
         prods: products,
-        pageTitle: "Admin Products",
+        pageTitle: "My Products",
         path: "/admin/products",
       });
     })
