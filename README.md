@@ -51,7 +51,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![image](https://github.com/user-attachments/assets/efdda313-a3ba-43f5-9a99-3764a20f5f3b)
+![image](https://github.com/user-attachments/assets/3fd16c59-06db-46d6-ac71-7f272fb53075)
 
 This online shop project simulates a functional e-commerce application where users can browse products, add items to a cart, and complete a checkout process. It covers the essential features of web development, including:
 
